@@ -25,3 +25,20 @@ a {
     color: green;
     text-decoration: none;
 }
+
+a:visited {
+    color:palevioletred;
+    background-color: blue;
+}
+
+a:hover {
+    color:red;
+    text-decoration: underline;
+    background-color: white;
+    font-weight: bold;
+}
+
+a:active {
+    color: green;
+    background-color: yellow;
+}
