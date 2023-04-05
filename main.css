@@ -10,6 +10,11 @@ header {
     color: maroon;
     padding: 15px;
     font-size: 16pt;
+    transition: 400ms 2s;
+}
+
+header:hover {
+    text-shadow: -5px 3px 2px black
 }
 
 footer {
@@ -19,8 +24,13 @@ footer {
     margin: 0px;
     font-style: italic;
     text-align: right;
+    transition: 400ms 2s;
 }
 
+footer:hover {
+    text-shadow: 10px 3px 2px black
+
+}
 a {
     color: green;
     text-decoration: none;
@@ -36,6 +46,7 @@ a:hover {
     text-decoration: underline;
     background-color: white;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 a:active {
