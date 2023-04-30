@@ -48,6 +48,14 @@
             let author = 'Автор страницы:\nЖвавий Карина Алексеевна\ninst:kzhavvv';
             alert(author);
         }
+        function changeOutput(buttonNum, backColor, textCollor) {
+            let output = document.getElementById('output');
+            output.innerHTML = 'Нажата кнопка' + buttonNum;
+            output.style.backgroundColor = backColor;
+            output.style.color = textCollor;
+            output.style.border = '3px solid'
+            output.style.borderRadius = '7px'
+        }
     </script>
     <style>
         .message {
@@ -62,6 +70,12 @@
             text-align: center;
             cursor: pointer;
             margin: 5px;
+        }
+
+        #output {
+            border: 1px solid;
+            width: 300px;
+            height: 40px;
         }
     </style>
 </head>
@@ -80,6 +94,15 @@
         <div class="message" onclick="showDivis()">Найти частное чисел</div>
 
         <div class="message" onclick="showAuthor()">Узнать, кто автор страницы</div>
+
+        <div>
+            <input type="button" value="Кнопка1" onclick="changeOutput(1, 'red', 'yellow') ">
+            <input type="button" value="Кнопка2" onclick="changeOutput(2, 'black', 'lime') ">
+            <input type="button" value="Кнопка3" onclick="changeOutput(3, 'blue', 'white') ">
+            <input type="button" value="Кнопка4" onclick="changeOutput(4, 'pink', 'purple') ">
+        </div>
+
+        <div id="output"></div>
     </main>
 
     <footer onclick="showAuthor()">
