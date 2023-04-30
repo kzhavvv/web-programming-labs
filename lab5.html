@@ -48,13 +48,27 @@
             let author = 'Автор страницы:\nЖвавий Карина Алексеевна\ninst:kzhavvv';
             alert(author);
         }
-        function changeOutput(buttonNum, backColor, textCollor) {
+        function changeOutput(buttonNum, backColor, textColor) {
             let output = document.getElementById('output');
             output.innerHTML = 'Нажата кнопка' + buttonNum;
             output.style.backgroundColor = backColor;
-            output.style.color = textCollor;
-            output.style.border = '3px solid'
-            output.style.borderRadius = '7px'
+            output.style.color = textColor;
+            output.style.border = '3px solid';
+            output.style.borderRadius = '7px';
+        }
+        function ShowSumProduct(){
+            let inputA = document.getElementById('numberApple');
+            let inputO = document.getElementById('numberOrange');
+            let inputG= document.getElementById('numberGrushi');
+            let inputD = document.getElementById('numberDini');
+            let Apple = parseInt(inputA.value);
+            let Orange= parseInt(inputO.value);
+            let Grushi= parseInt(inputG.value);
+            let Dini= parseInt(inputD.value);
+            let result = (Apple * 100) + (Orange * 150) + (Grushi * 80) + (Dini * 300);
+
+            let output = document.getElementById('itog');
+            output.innerHTML = 'Итоговая сумма: ' + result + ' рублей.';
         }
     </script>
     <style>
@@ -76,6 +90,25 @@
             border: 1px solid;
             width: 300px;
             height: 40px;
+        }
+        .Shop {
+            margin: 5px;
+            border: 2px solid;
+            height: 350px;
+            width: 250px;
+            text-align: left;
+            padding: 2px;
+            font-size: 12pt;
+            background-color: peachpuff;
+            padding: 5px;
+        }
+
+            .korzina {
+            margin: 5px;
+            text-align: center;
+            padding: 2px;
+            font-size: 20pt;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -103,6 +136,18 @@
         </div>
 
         <div id="output"></div>
+
+        <div class="Shop">
+            <div class="korzina">Корзина товаров</div>
+            
+            <label>Яблоки(100 рублей/штука) <div><input type="number" value="0" id="numberApple"></label><br></div>
+            <label>Апельсины(150 рублей/штука)<div><input type="number" value="0" id="numberOrange"></label><br></div>
+            <label>Груши(80 рублей/штука) <div><input type="number" value="0" id="numberGrushi"></label><br></div>
+            <label>Дыня(300 рублей/штука) <div><input type="number" value="0" id="numberDini"></label><br></div>
+            <input type="button" value="Рассчитать" onclick="ShowSumProduct()">
+
+            <div id="itog">Итоговая сумма: </div>
+        </div>
     </main>
 
     <footer onclick="showAuthor()">
