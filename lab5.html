@@ -70,6 +70,10 @@
             let output = document.getElementById('itog');
             output.innerHTML = 'Итоговая сумма: ' + result + ' рублей.';
         }
+        function removekrugi(number) {
+            let del = document.getElementById(number)
+            del.style.opacity = '0'
+        }
     </script>
     <style>
         .message {
@@ -103,12 +107,66 @@
             padding: 5px;
         }
 
-            .korzina {
+        .korzina {
             margin: 5px;
             text-align: center;
             padding: 2px;
             font-size: 20pt;
             font-weight: bold;
+        }
+        .krugi div {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 1px solid;
+            text-align: center;
+            font-size: 24px;
+            line-height: 100px;
+            margin-right: 20px;
+            color: #fff;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+        .krug1 {
+            background-color: red;
+        }
+
+        .krug2 {
+            background-color: orange;
+        }
+
+        .krug3 {
+            background-color: yellow;
+        }
+
+        .krug4 {
+            background-color: green;
+        }
+
+        .krug5 {
+            background-color: blue;
+        }
+
+        .krug6 {
+            background-color: darkblue;
+        }
+
+        .krug7 {
+            background-color: purple;
+            }
+
+        .krug8 {
+            background-color: pink;
+        }
+
+        .krug9 {
+            background-color: rgb(224, 73, 124);
+        }
+
+        .krug10 {
+            background-color: rgb(228, 27, 94);
         }
     </style>
 </head>
@@ -140,13 +198,26 @@
         <div class="Shop">
             <div class="korzina">Корзина товаров</div>
             
-            <label>Яблоки(100 рублей/штука) <div><input type="number" value="0" id="numberApple"></label><br></div>
-            <label>Апельсины(150 рублей/штука)<div><input type="number" value="0" id="numberOrange"></label><br></div>
-            <label>Груши(80 рублей/штука) <div><input type="number" value="0" id="numberGrushi"></label><br></div>
-            <label>Дыня(300 рублей/штука) <div><input type="number" value="0" id="numberDini"></label><br></div>
+            <label>Яблоки(100 рублей/штука) <div><input type="number" min="0" value="0" id="numberApple"></label><br></div>
+            <label>Апельсины(150 рублей/штука)<div><input type="number" min="0" value="0" id="numberOrange"></label><br></div>
+            <label>Груши(80 рублей/штука) <div><input type="number" min="0" value="0" id="numberGrushi"></label><br></div>
+            <label>Дыня(300 рублей/штука) <div><input type="number" min="0" value="0" id="numberDini"></label><br></div>
             <input type="button" value="Рассчитать" onclick="ShowSumProduct()">
 
             <div id="itog">Итоговая сумма: </div>
+        </div>
+
+        <div class="krugi">
+            <div class="krug1" id="1">1</div>
+            <div class="krug2" id="2">2</div>
+            <div class="krug3" id="3">3</div>
+            <div class="krug4" id="4">4</div>
+            <div class="krug5" id="5">5</div>
+            <div class="krug6" id="6">6</div>
+            <div class="krug7" id="7">7</div>
+            <div class="krug8" id="8" onclick="removekrugi('8')">8</div>
+            <div class="krug9" id="9" onclick="removekrugi('9')">9</div>
+            <div class="krug10" id="10" onclick="removekrugi('10')">10</div>
         </div>
     </main>
 
