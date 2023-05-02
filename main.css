@@ -16,9 +16,11 @@ header {
 header:hover {
     text-shadow: -5px 3px 2px black
 }
+
 main {
     margin: 10px 20px;
 }
+
 footer {
     background: linear-gradient(to right bottom,red, orange, yellow, green, lightblue, blue, purple);
     color: maroon;
