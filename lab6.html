@@ -27,6 +27,17 @@
             height: 200px;
             width: 670px;
         }
+            .color{
+            border: 3px solid red;
+            background-color: yellow;
+            color: black;
+            width: 260px;
+            height: 110px;
+            text-align: center;
+        }
+        .color div {
+            padding: 15px;
+        }
     </style>
     <script>
         let number;
@@ -81,6 +92,33 @@
                 helpButton.innerHTML = 'Показать правила игры';
         }
         }
+        function changeColor(div) {
+            if (div.style.backgroundColor == 'yellow'){
+            div.style.backgroundColor = 'red'
+            div.style.color = 'black'
+            document.getElementById('color-name').innerHTML = 'Красный';
+            }
+            else if (div.style.backgroundColor == 'red') {
+                div.style.backgroundColor = 'black'
+                div.style.color = 'white'
+                document.getElementById('color-name').innerHTML = 'Чёрный';
+            }
+            else if (div.style.backgroundColor == 'black') {
+                div.style.backgroundColor = 'pink'
+                div.style.color = 'white'
+                document.getElementById('color-name').innerHTML = 'Розовый';
+            }
+            else if (div.style.backgroundColor == 'pink') {
+                div.style.backgroundColor = 'green'
+                div.style.color = 'black'
+                document.getElementById('color-name').innerHTML = 'Зеленый';
+            }
+            else {
+                div.style.backgroundColor = 'yellow'
+                div.style.color = 'brown'
+                document.getElementById('color-name').innerHTML = 'Жёлтый';
+            }
+        }
     </script>
 </head>
 
@@ -130,6 +168,13 @@
                 <li>Количество попыток не ограничено</li>
                 <li>Если вы угадали, поздравляю, вы выиграли!</li>
             </ol>
+        </div>
+        <div class="color" ondblclick="changeColor(this)">
+            <div>
+                Цвет: <span id="color-name">жёлтый</span><br>
+                Сделай двойной щелчок,<br>
+                чтобы сментить цвет.
+            </div>
         </div>
     </main>
 
