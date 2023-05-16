@@ -14,6 +14,19 @@
             margin: 10px auto;
             text-align: center;
     }
+        .help {
+            border-radius: 15px;
+            background-color: rgb(224, 155, 178);
+            width: 400px;
+            margin: 5px;
+            padding: 5px;
+        }
+        .help-text {
+            border-radius: 15px;
+            background-color: rgb(224, 155, 178);
+            height: 200px;
+            width: 670px;
+        }
     </style>
     <script>
         let number;
@@ -56,6 +69,18 @@
             count = 0;
             startGame()
         }
+        function toggleHelp() {
+            let helpButton = document.getElementById('show-help');
+            let helpText = document.getElementById('help-text');
+
+            if (helpText.style.display === 'none') {
+                helpText.style.display = 'block';
+                helpButton.innerHTML = 'Скрыть правила игры';
+            } else {
+                helpText.style.display = 'none';
+                helpButton.innerHTML = 'Показать правила игры';
+        }
+        }
     </script>
 </head>
 
@@ -92,6 +117,19 @@
             <div>
                 <button onclick="again()">Сыграть еще раз</button>
             </div>
+        </div>
+        <div class="help">
+            <button id="show-help" onclick="toggleHelp()">Показать правила игры</button>
+        </div>
+        <div id="help-text" class="help-text" style="display: none;">
+            <h2 style="text-align: center;">Правила игры</h2>
+            <ol>
+                <li>Нажмите на кнопку "сыграть в игру"</li>
+                <li>Введите любое число от 1 до 100</li>
+                <li>Следуйте подсказкам ("вы ввели маленькое число"/"вы ввели большое число")</li>
+                <li>Количество попыток не ограничено</li>
+                <li>Если вы угадали, поздравляю, вы выиграли!</li>
+            </ol>
         </div>
     </main>
 
