@@ -92,9 +92,9 @@
         }
 
         #wear {
-        width: 200px;
-        height: auto; 
-        margin-top: 10px; 
+            width: 200px;
+            height: auto; 
+            margin-top: 10px; 
         }
     </style>
     <script>
@@ -148,13 +148,13 @@
             } else {
                 helpText.style.display = 'none';
                 helpButton.innerHTML = 'Показать правила игры';
-        }
+            }
         }
         function changeColor(div) {
             if (div.style.backgroundColor == 'yellow'){
-            div.style.backgroundColor = 'red'
-            div.style.color = 'black'
-            document.getElementById('color-name').innerHTML = 'Красный';
+                div.style.backgroundColor = 'red'
+                div.style.color = 'black'
+                document.getElementById('color-name').innerHTML = 'Красный';
             }
             else if (div.style.backgroundColor == 'red') {
                 div.style.backgroundColor = 'black'
@@ -208,25 +208,25 @@
             let type = document.getElementById('wear-type').value;
             let wear = document.getElementById('wear');
             if (color == 'Красный' && type == 'Футболка') {
-            wear.src = 'https://ulrid.ru/image/cache/catalog/8c9b044b44c311e980f90050569b1703_15dae130458e11e980f90050569b1703-1000x1000.jpg';
+                wear.src = 'https://ulrid.ru/image/cache/catalog/8c9b044b44c311e980f90050569b1703_15dae130458e11e980f90050569b1703-1000x1000.jpg';
             } else if (color == 'Белый' && type == 'Футболка') {
-            wear.src = 'https://img.printfact.ru/image/big/women/koty/futbolki-kotenok-4d5c0.jpg';
+                wear.src = 'https://img.printfact.ru/image/big/women/koty/futbolki-kotenok-4d5c0.jpg';
             } else if (color == 'Черный' && type == 'Футболка') {
-            wear.src = 'https://media.gq.com/photos/5e6944f74d6be70008ac16c2/master/w_2000,h_1333,c_limit/Uniqlo-U-crew-neck-short-sleeve-T-shirt.jpgg';
+                wear.src = 'https://media.gq.com/photos/5e6944f74d6be70008ac16c2/master/w_2000,h_1333,c_limit/Uniqlo-U-crew-neck-short-sleeve-T-shirt.jpgg';
             } else if (color == 'Красный' && type == 'Поло') {
-            wear.src = 'http://vester2013.ru/upload/iblock/1bc/rubashka_polo_krasnyy.jpg';
+                wear.src = 'http://vester2013.ru/upload/iblock/1bc/rubashka_polo_krasnyy.jpg';
             } else if (color == 'Белый' && type == 'Поло') {
-            wear.src = 'https://www.professionalsport.ru/spree/products/000/139/236/original/irstpolcm6a100.jpg?1565859641';
+                wear.src = 'https://www.professionalsport.ru/spree/products/000/139/236/original/irstpolcm6a100.jpg?1565859641';
             } else if (color == 'Черный' && type == 'Поло') {
-            wear.src = 'https://nuw.store/upload/iblock/d9b/tne3dt3bwen3hrximpvbrpo7fuw5kkka.jpg';
+                wear.src = 'https://nuw.store/upload/iblock/d9b/tne3dt3bwen3hrximpvbrpo7fuw5kkka.jpg';
             } else if (color == 'Красный' && type == 'Майка') {
-            wear.src = 'https://loloclo.ru/upload/iblock/75e/75ed59c1860e5836bb3b83c2092ac11e.jpg';
+                wear.src = 'https://loloclo.ru/upload/iblock/75e/75ed59c1860e5836bb3b83c2092ac11e.jpg';
             } else if (color == 'Белый' && type == 'Майка') {
-            wear.src = 'https://rostov.stilono.ru/upload/resize_cache/iblock/2f8/790_990_1/2f8de1d2f33650d442a51ad9fd8ec9bf.jpg';
+                wear.src = 'https://rostov.stilono.ru/upload/resize_cache/iblock/2f8/790_990_1/2f8de1d2f33650d442a51ad9fd8ec9bf.jpg';
             } else if (color == 'Черный' && type == 'Майка') {
-            wear.src = 'https://images-eu.ssl-images-amazon.com/images/I/31wWKT89JVL._UL1000_.jpg';
+                wear.src = 'https://images-eu.ssl-images-amazon.com/images/I/31wWKT89JVL._UL1000_.jpg';
             } else {
-            wear.src = '';
+                wear.src = '';
             }
         }
     </script>

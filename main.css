@@ -29,6 +29,9 @@ footer {
     font-style: italic;
     text-align: right;
     transition: 400ms 2s;
+    right: 0px;
+    width: 100%;
+    bottom: 0;
 }
 
 footer:hover {
