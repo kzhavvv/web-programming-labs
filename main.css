@@ -11,6 +11,8 @@ header {
     padding: 15px;
     font-size: 16pt;
     transition: 400ms 2s;
+    width: 100%;
+    position: fixed;
 }
 
 header:hover {
@@ -24,7 +26,7 @@ main {
 footer {
     background: linear-gradient(to right bottom,red, orange, yellow, green, lightblue, blue, purple);
     color: maroon;
-    padding: 50px;
+    padding: 15px;
     margin: 0px;
     font-style: italic;
     text-align: right;
