@@ -97,6 +97,45 @@
                 table.appendChild(row);
             }
         }
+        function Cursmoney() {
+
+                let date = ['17-05-2023', '18-05-2023', '19-05-2023', '22-05-2023', '23-05-2023',
+                            '24-04-2023', '25-04-2023', '26-04-2023', '29-04-2023', '31-04-2023']
+
+                let exchange = [2.75, 2.77, 2.90, 2.72, 2.71,
+                                2.77, 2.80, 2.86, 2.73, 2.73 ]
+                let table = document.getElementById('curs');
+
+                for (let i = 0; i<exchange.length; i++) {
+                    let tr = document.createElement('tr');
+                    let td = document.createElement('td');
+                    let newtd = document.createElement('td');
+                    let minustd = document.createElement('td');
+                    td.innerHTML = exchange[i]
+                    newtd.innerHTML = date[i]
+                    minustd.innerHTML = (exchange[i] - exchange[i - 1]).toFixed(2); 
+                    tr.appendChild(newtd);
+                    tr.appendChild(td);
+                    tr.appendChild(minustd);
+                    table.appendChild(tr)
+
+                let sum = 0;
+                    for(let i = 0; i < exchange.length; i++) {
+                        sum = sum + exchange [i];
+                }
+
+                let average = sum / exchange.length;
+                document.getElementById('srednee').innerHTML = 'Среднее значение: ' + average.toFixed(2);
+
+                let exchangemax = Math.max(...exchange)
+                let exchangemin = Math.min(...exchange)
+                let max = document.getElementById('max')
+                let min = document.getElementById('min')
+                max.innerHTML = 'Максимальная цена акции: ' + exchangemax
+                min.innerHTML = 'Минимальная цена акции: ' + exchangemin
+
+                }
+}
     </script>
 </head>
 
@@ -122,6 +161,9 @@
 
         <button onclick="Tablesum()">Таблица умножения</button>
         <div id="multiplication-table"></div>
+
+        <button onclick="Cursmoney()">Курс акций "МосЭнерго"</button>
+        <div id="srednee"></div>
     </main>
 
     <footer>
