@@ -43,6 +43,7 @@
                 block.className = "transparent-block";
                 block.style.opacity = i / 10;
                 container.appendChild(block);
+            }
         }
         function createCircles() {
             let circleCount = document.getElementById('circleCount').value;
@@ -63,7 +64,39 @@
                 circlesContainer.appendChild(circle);
             }
         }
-}
+        function Tablesum() {
+
+                let table = document.getElementById("multiplication-table");
+                table.innerHTML = '';
+
+                for (let i = 13; i <= 33; i++) {
+                let row = document.createElement('tr');
+                let multiplication = i * 50;
+
+                let cell1 = document.createElement('td');
+                cell1.innerText = i;
+
+                let cell2 = document.createElement('td');
+                cell2.innerText = '*';
+
+                let cell3 = document.createElement('td');
+                cell3.innerText = '50';
+
+                let cell4 = document.createElement('td');
+                cell4.innerText = '=';
+
+                let cell5 = document.createElement('td');
+                cell5.innerText = multiplication;
+
+                row.appendChild(cell1);
+                row.appendChild(cell2);
+                row.appendChild(cell3);
+                row.appendChild(cell4);
+                row.appendChild(cell5);
+
+                table.appendChild(row);
+            }
+        }
     </script>
 </head>
 
@@ -86,6 +119,9 @@
         <button onclick="createCircles()">Создать круги</button>
         <input type="number" id="circleCount" placeholder="Количество кругов">
         <div id="circlesContainer"></div>
+
+        <button onclick="Tablesum()">Таблица умножения</button>
+        <div id="multiplication-table"></div>
     </main>
 
     <footer>
