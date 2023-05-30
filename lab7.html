@@ -35,6 +35,35 @@
             let average = sum / exchange.length;
             document.getElementById('detail').innerHTML = 'Среднее значение: ' + average;
         }
+        function addTransparentBlock() {
+            let container = document.getElementById("transparentblocks");
+
+            for (let i = 0; i < 10; i++) {
+                let block = document.createElement("div");
+                block.className = "transparent-block";
+                block.style.opacity = i / 10;
+                container.appendChild(block);
+        }
+        function createCircles() {
+            let circleCount = document.getElementById('circleCount').value;
+            let circlesContainer = document.getElementById('circlesContainer');
+            circlesContainer.innerHTML = '';
+            
+            for (let i = circleCount; i > 0; i--) {
+                let circle = document.createElement('div');
+                circle.classList.add('circle');
+                circle.innerText = i;
+                
+                if (i % 2 === 0) {
+                circle.classList.add('white');
+                } else {
+                circle.classList.add('red');
+                }
+                
+                circlesContainer.appendChild(circle);
+            }
+        }
+}
     </script>
 </head>
 
@@ -50,6 +79,13 @@
         <button onclick="showExchange()">Курс доллара</button>
         <table border="1" id="dollar-exchange"></table>
         <div id="detail"></div>
+
+        <button onclick="addTransparentBlock()">Полупрозрачные блоки</button>
+        <div id="transparentblocks"></div>
+
+        <button onclick="createCircles()">Создать круги</button>
+        <input type="number" id="circleCount" placeholder="Количество кругов">
+        <div id="circlesContainer"></div>
     </main>
 
     <footer>

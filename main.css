@@ -62,3 +62,28 @@ a:active {
     color: green;
     background-color: yellow;
 }
+
+.transparent-block {
+    width: 50px;
+    height: 50px;
+    background-color: maroon;
+    margin-bottom: 10px;
+}
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+  
+.red {
+    background-color: red;
+}
+  
+.white {
+    background-color: white;
+}
