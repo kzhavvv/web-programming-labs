@@ -12,7 +12,6 @@ header {
     font-size: 16pt;
     transition: 400ms 2s;
     width: 100%;
-    position: fixed;
 }
 
 header:hover {
@@ -21,6 +20,7 @@ header:hover {
 
 main {
     margin: 10px 20px;
+    margin-bottom: 10px;
 }
 
 footer {
