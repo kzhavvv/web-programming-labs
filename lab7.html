@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Жвавий Карина Алексеевна. Лабораторная 7</title>
-<link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Жвавий Карина Алексеевна. Лабораторная 7</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+    .curs {
+        margin-bottom: 100px;
+    }
+    </style>
     <script>
         function addBlocks() {
             let blocks = document.getElementById('blocks');
@@ -162,7 +167,7 @@
         <button onclick="Tablesum()">Таблица умножения</button>
         <div id="multiplication-table"></div>
 
-        <button onclick="Cursmoney()">Курс акций "МосЭнерго"</button>
+        <button class="curs" onclick="Cursmoney()">Курс акций "МосЭнерго"</button>
         <table border="1" id = curs></table>
         <div id="srednee"></div>
         <div id="max"></div>
