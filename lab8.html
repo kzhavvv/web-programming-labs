@@ -7,19 +7,55 @@
     <title>Жвавий Карина Алексеевна. Лабораторная 8</title>
     <link rel="stylesheet" href="main.css">
     <script src="lab8.js"></script>
+    <style>
+    .time {
+    font-size: 24px;
+    margin: 5px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: 3px solid;
+    width: 800px;
+    padding: 100px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #12BCB0 20%, #FABE0E 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    padding: 0.3em 0.6em ;
+    border: 3px solid transparent;
+    border-image: linear-gradient(135deg, #12BCB0 20%, #FABE0E 70%);
+    border-image-slice: 1;
+    }
+
+    @import url(https://fonts.googleapis.com/css?family=Rubik+One&subset=latin,cyrillic);
+    .clock1 {
+    text-align: right;
+    font-size: 50px;
+    margin-left: 1000px;
+    font-family: 'Rubik One', sans-serif;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #490b49 33%, #8e1699 66%, #a82bc7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: purple;
+    display: table;
+    }
+    </style>
 </head>
 
 <body onload="showDate()">
     <header>
     НГТУ, ФБ, Лабораторная работа 8
+    <div class="clock1" id="clock" >00:00:00</div>
     </header>
 
     <main>
+        <div class="time">
         <div id="current-date"></div>
         <div id="current-date1"></div>
         <div id="current-date2"></div>
         <div id="current-date3"></div>
         <div id="current-date4"></div>
+        </div>
 
         <div>
             <label>Дата рождения: <input type="date"></label>
